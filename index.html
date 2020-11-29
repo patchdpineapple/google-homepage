@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta charset="UTF-8">
         <title>Google</title>
 
@@ -8,34 +8,72 @@
             body{
                 font-family: arial, sans-serif;
                 font-size: small;
-            }
-            nav{
-                display: flex;
-                width: 300;
-                background-color: rgb(216, 216, 216);
-            }
-            #navlist {
-                justify-items: right;
-            }
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                
+                min-width: 400px;
+                margin: 0 auto;
                 
             }
 
-            li {
-                display: inline;
+            a{
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+                opacity: .85;
             }
-            #google-logo{
+            a:hover{
+                text-decoration: underline;
+                opacity: .65;
+            }
+            a.goffer{
+                color: blue;
+                opacity: 1;
+            }
+            a.goffer:hover{
+                opacity: 1;
+            }
+
+
+            nav{
+                float: right;
+                width: 160px;
+                padding-right: 30px;
+                padding-left: 30px;
+                
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(255, 255, 255);
+                font-size:smaller;
+                vertical-align: middle;
+                
+            }
+
+            #apps-and-s{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3px; 
+                background-color: rgb(255, 255, 255);
+            }
+
+            #letterS {
+              
+              border-radius: 50%;
+            }
+
+            #google-logo-div{
                 line-height: 3px;
             }
+
+            #logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
             #search-div{
                 
                 background-color: rgb(255, 255, 255);
                 line-height: 0px;
             }
+
             #search-box{
                 width: 450px;
                 
@@ -47,10 +85,13 @@
                 box-shadow: 0px, 0px, 0px, white;
             }
 
+            #google-offer{
+                width: 20%;
+                margin: auto;
+            }
+
             #phdiv{
                 background-color: rgb(233, 233, 233);
-                padding-top: .1px;
-                padding-bottom: .1px;
                 border-style: solid;
                 border-color: rgb(221, 221, 221);
                 border-width: 1px;
@@ -58,30 +99,57 @@
 
             footer{
                 background-color: rgb(233, 233, 233);
-                padding-top: .1px;
-                padding-bottom: .1px;
-                display: flex;
+                
+            }
+
+            #footerclascont{
+                
+
+            }
+            .footerclas{
+                display: inline-block;
+                opacity: .6;
+            }
+
+            .footerclas a{
+                display: inline-block;
+                padding-left: 10px;
+
+            }
+            
+            #foot1{
+                justify-self: flex-start;
+                
+            }
+            
+            #foot2{
+                justify-self: flex-end;
             }
 
         </style>
 
-    </head>
-    <body>
+</head>
+<body>
 
-        <nav>
-            <div id="navlist">
-                <ul>
-                     <li><a href="">Gmail</a></li>
-                     <li><a href="">Images</a></li>
-                     <li><a href="">Apps</a></li>
-                     <li><a href=""><img src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a></li>
-                 </ul>
-            </div>
+
+        <nav>           
+                <div style="line-height: 40px;">
+                     <a href="#">Gmail</a>
+                     <a style="padding-left: 10px;" href="#">Images</a>      
+                </div>
+                <div id="apps-and-s">
+                     <a href="#"><img id="apps" src="images/appsicon.JPG"></a>
+                     <a style="padding-left: 10px;" href="#"><img id="letterS" src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a>
+                </div>
+            
         </nav>
-        <div id="google-logo">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"
-        style="margin-top: 80px;">
+
+<main>
+        <div id="google-logo-div">
+            <img id ="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"
+             style="padding-top: 80px;">
         </div>
+
     <form style="margin-top: 40px">
        <div id="search-div">
            <input type="text" id="search-box">
@@ -92,33 +160,36 @@
         <button class="search-lucky">I'm Feeling Lucky</button>
       </div>
     </form>
+
     <div id="google-offer" style="line-height: 100px;">
         Google offered in:
-        <a href="">Filipino</a>
-        <a href="">Cebuano</a>
+        <a class="goffer" href="">Filipino</a>
+        <a class="goffer" href="">Cebuano</a>
     </div>
-    <div id="phdiv">
-        <p>Philippines</p>
+</main>
+
+    <div id="phdiv" style="margin-left: -10px;">
+        <p style="padding-left: 20px; opacity: .6">Philippines</p>
     </div>
-    <footer>
+
+    <footer style="margin-left: -10px; margin-bottom: -50px; padding-bottom: 30px;"> 
         
-            <ul>
-              <li><a href="">Advertising</a></li>
-              <li><a href="">Business</a></li>
-              <li><a href="">About</a></li>
-              <li><a href="">How Search works</a></li>
-            </ul>
+        <div id="footerclascont" style="line-height: 30px;">
+            <div class="footerclas" id="foot1">
+                <a style="padding-left: 20px;" href="">Advertising</a>
+                <a href="">Business</a>
+                <a href="">About</a>
+                <a href="">How Search works</a>
+            </div>
         
         
-            <ul>
-              <li><a href="">Privacy</a></li>
-              <li><a href="">Terms</a></li>
-              <li><a href="">Settings</a></li>
-            </ul>
+            <div class="footerclas" id="foot2">
+              <a style="padding-left: 10px;" href="">Privacy</a>
+              <a style="padding-left: 10px;" href="">Terms</a>
+              <a style="padding-left: 10px;" href="">Settings</a>
+            </div>
+        </div>
         
         </footer>
-    
-    
-    
-    </body>
+</body>
 </html>
