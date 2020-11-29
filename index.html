@@ -7,6 +7,15 @@
         <style>
             body{
                 font-family: arial, sans-serif;
+                font-size: small;
+            }
+            nav{
+                display: flex;
+                width: 300;
+                background-color: rgb(216, 216, 216);
+            }
+            #navlist {
+                justify-items: right;
             }
             ul {
                 list-style-type: none;
@@ -38,13 +47,6 @@
                 box-shadow: 0px, 0px, 0px, white;
             }
 
-            
-            #google-offer{
-                display: inline-block;
-                line-height: 90px;
-                
-            }
-
             #phdiv{
                 background-color: rgb(233, 233, 233);
                 padding-top: .1px;
@@ -53,40 +55,44 @@
                 border-color: rgb(221, 221, 221);
                 border-width: 1px;
             }
+
             footer{
                 background-color: rgb(233, 233, 233);
                 padding-top: .1px;
                 padding-bottom: .1px;
                 display: flex;
             }
+
         </style>
 
     </head>
     <body>
 
         <nav>
-            <ul>
-                <li><a href="">Gmail</a></li>
-                <li><a href="">Images</a></li>
-                <li><a href="">Apps</a></li>
-                <li><a href=""><img src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a></li>
-            </ul>
+            <div id="navlist">
+                <ul>
+                     <li><a href="">Gmail</a></li>
+                     <li><a href="">Images</a></li>
+                     <li><a href="">Apps</a></li>
+                     <li><a href=""><img src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a></li>
+                 </ul>
+            </div>
         </nav>
         <div id="google-logo">
         <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"
-        style="padding-top: 109px;">
+        style="margin-top: 80px;">
         </div>
-    <form style="padding-top: 40px">
+    <form style="margin-top: 40px">
        <div id="search-div">
            <input type="text" id="search-box">
        </div>
     
-        <div style="padding-top: 30px">
+      <div style="margin-top: 30px;">
         <button type="submit" class="search-lucky">Google Search</button>
         <button class="search-lucky">I'm Feeling Lucky</button>
-        </div>
+      </div>
     </form>
-    <div id="google-offer">
+    <div id="google-offer" style="line-height: 100px;">
         Google offered in:
         <a href="">Filipino</a>
         <a href="">Cebuano</a>
