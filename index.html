@@ -8,8 +8,10 @@
             body{
                 font-family: arial, sans-serif;
                 font-size: small;
-                min-width: 400px;
+                border: 1px solid transparent;
+                width: 100%;
                 margin: 0 auto;
+                padding: 0;
                 
             }
 
@@ -23,6 +25,7 @@
                 opacity: .65;
             }
             a.goffer{
+                
                 color: blue;
                 opacity: 1;
             }
@@ -32,62 +35,88 @@
 
 
             nav{
+                display: flex;
                 float: right;
-                width: 160px;
+                width: auto;
                 padding-right: 30px;
                 padding-left: 30px;
-                
-                display: flex;
-                justify-content: space-between;
-                background-color: rgb(255, 255, 255);
-                font-size:smaller;
-                vertical-align: middle;
+                font-size: smaller;
+                overflow: auto;
+            
                 
             }
 
-            #apps-and-s{
+            nav div {
                 display: flex;
-                justify-content: center;
+                width: auto;
+                height: auto;
                 align-items: center;
-                margin-top: 3px; 
-                background-color: rgb(255, 255, 255);
+               
             }
 
-            #letterS {
-              
-              border-radius: 50%;
-            }
 
             #google-logo-div{
                 line-height: 3px;
             }
 
             #logo {
-                display: block;
+                display: inline-block;
                 margin-left: auto;
                 margin-right: auto;
             }
 
-            #search-div{
-                
-                background-color: rgb(255, 255, 255);
-                line-height: 0px;
+            form {
+                text-align: center;
             }
 
-            #search-box{
-                width: 450px;
+            #search-div{
+                height: auto;
+                background-color: rgb(255, 255, 255);
+                text-align: center;
+            }
+
+            #searchcont {
+                display: inline-block;
+                height: 40px;
+                width: 40%;
+                background-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 50px;
+                border-width: 1px;
+                border-color: rgba(209, 209, 209, .7);
                 
             }
+            #searchcont:hover{
+                box-shadow: 0 1px 5px 0px rgba(0,0,0,0.3);
+            }
+
+
+            #search-box{
+                width: 90%;
+                border-color: rgba(255, 0, 0, 0);
+            }
         
-            .search-lucky{
-                border-color: rgb(255, 255, 255);
+            #search-lucky {
+                text-align: center;
+            }
+
+            #search-lucky button {
+                display: inline-block;
+                width:124px;
+                height: 30px;
+                border-color: rgba(255, 255, 255, 0);
+                border-radius: 4px;
                 background-color: rgb(255, 255, 255);
-                box-shadow: 0px, 0px, 0px, white;
+                font-family: sans-serif;
+            }
+            #search-lucky button:hover {
+                border: 1px solid rgba(85, 85, 85, 0.2);
+                box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.1);
             }
 
             #google-offer{
-                width: 20%;
-                margin: auto;
+                text-align: center;
+                font-size: smaller;
             }
 
             #phdiv{
@@ -102,11 +131,7 @@
                 
             }
 
-            #footerclascont{
-                
-
-            }
-            .footerclas{
+            .footerclas {
                 display: inline-block;
                 opacity: .6;
             }
@@ -131,62 +156,70 @@
 </head>
 <body>
 
-
+    <div style="background-color: blue; margin-bottom: 100px;" >
         <nav>           
-                <div style="line-height: 40px;">
+            <div id="navcont">
+                <div style="line-height: 40px; height: 40px;">
                      <a href="#">Gmail</a>
                      <a style="padding-left: 10px;" href="#">Images</a>      
                 </div>
                 <div id="apps-and-s">
-                     <a href="#"><img id="apps" src="images/appsicon.JPG"></a>
-                     <a style="padding-left: 10px;" href="#"><img id="letterS" src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a>
+                     <a style="padding-left: 10px;"href="#"><img id="apps" src="images/appsicon.JPG"></a>
+                     <a style="padding-left: 10px;" href="#"><img style="border-radius: 50%;"
+                        id="letterS" src="https://lh3.googleusercontent.com/ogw/ADGmqu-zC_amAoQsFhgAYjqx_T82GKhja1HZ1ivI2UwB=s32-c-mo"></a>
                 </div>
-            
+            </div>
         </nav>
-
+    </div>
 <main>
-        <div id="google-logo-div">
+        <div id="google-logo-div" style="text-align: center;">
             <img id ="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo"
-             style="padding-top: 80px;">
+             >
         </div>
 
-    <form style="margin-top: 40px">
-       <div id="search-div">
-           <input type="text" id="search-box">
-       </div>
-    
-      <div style="margin-top: 30px;">
-        <button type="submit" class="search-lucky">Google Search</button>
-        <button class="search-lucky">I'm Feeling Lucky</button>
-      </div>
+    <form style="padding-top: 40px">
+        
+        <div id="search-div">
+            <div id="searchcont">
+                <img class="searchclas" src="images/searchicon.JPG">
+                <input class="searchclas" type="text" id="search-box" 
+                style="border-radius: 20px; margin-top: 8px; ">
+            </div>
+        </div>
+        
+
+         <div id="search-lucky" style="padding-top: 20px; ">
+            <button>Google Search</button>
+            <button>I'm Feeling Lucky</button>
+         </div>
     </form>
 
-    <div id="google-offer" style="line-height: 100px;">
+    <div id="google-offer" style="line-height: 100px; ">
         Google offered in:
-        <a class="goffer" href="">Filipino</a>
-        <a class="goffer" href="">Cebuano</a>
+        <a class="goffer" href="" style="margin-left: 7px;">Filipino</a>
+        <a class="goffer" href="" style="margin-left: 7px;">Cebuano</a>
     </div>
 </main>
 
-    <div id="phdiv" style="margin-left: -10px;">
-        <p style="padding-left: 20px; opacity: .6">Philippines</p>
+    <div id="phdiv" style="margin-left: -10px; margin-right:-10px; margin-top: 100px">
+        <p style="padding-left: 30px; opacity: .6">Philippines</p>
     </div>
 
-    <footer style="margin-left: -10px; margin-bottom: -50px; padding-bottom: 30px;"> 
+    <footer style="margin-left: -10px; margin-right:-10px;"> 
         
-        <div id="footerclascont" style="line-height: 30px;">
+        <div style="line-height: 30px;">
             <div class="footerclas" id="foot1">
-                <a style="padding-left: 20px;" href="">Advertising</a>
+                <a style="padding-left: 30px;" href="">Advertising</a>
                 <a href="">Business</a>
                 <a href="">About</a>
                 <a href="">How Search works</a>
             </div>
         
         
-            <div class="footerclas" id="foot2">
+            <div class="footerclas" id="foot2" style="float: right;">
               <a style="padding-left: 10px;" href="">Privacy</a>
               <a style="padding-left: 10px;" href="">Terms</a>
-              <a style="padding-left: 10px;" href="">Settings</a>
+              <a style="padding-left: 10px; padding-right: 30px;" href="">Settings</a>
             </div>
         </div>
         
